@@ -10,14 +10,14 @@ namespace Ejercicio1Global.Dtos
     /// Clase que contiene la informacion necesaria de las bibliotecas
     /// irodhan -> 01/04/2024
     /// </summary>
-    internal class BliotecaDto
+    internal class BibliotecaDto
     {
         //Atributos
         string nombreBiblioteca = "aaaaa";
         string direccionBiblioteca = "aaaaa";
 
         //Constructores
-        public BliotecaDto(string nombreBiblioteca, string direccionBiblioteca)
+        public BibliotecaDto(string nombreBiblioteca, string direccionBiblioteca)
         {
             this.NombreBiblioteca = nombreBiblioteca;
             this.DireccionBiblioteca = direccionBiblioteca;
