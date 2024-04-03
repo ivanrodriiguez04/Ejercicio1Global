@@ -26,7 +26,7 @@ namespace Ejercicio1Global.Dtos
             this.NombreCliente = nombreCliente;
             this.ApellidosCliente = apellidosCliente;
             this.FchNacimientoCliente = fchNacimientoCliente;
-            DNICliente1 = dNICliente;
+            this.DNICliente1 = dNICliente;
             this.EmailCliente = emailCliente;
             this.FchInicioSuspension = fchInicioSuspension;
             this.FchFinSuspension = fchFinSuspension;
