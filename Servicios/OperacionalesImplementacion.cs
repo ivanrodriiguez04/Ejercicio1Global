@@ -21,7 +21,10 @@ namespace Ejercicio1Global.Servicios
         private BibliotecaDto crearBiblioteca() 
         { 
             BibliotecaDto biblioteca = new BibliotecaDto();
-
+            Console.WriteLine("Introduzca el nombre de la biblioteca: ");
+            biblioteca.NombreBiblioteca = Console.ReadLine();
+            Console.WriteLine("Introduzca la direccion de la biblioteca: ");
+            biblioteca.DireccionBiblioteca = Console.ReadLine();
             return biblioteca;
         }
 
@@ -53,7 +56,32 @@ namespace Ejercicio1Global.Servicios
 
         public void darAltaLibro(List<LibroDto> listaLibrosAntigua)
         {
-            throw new NotImplementedException();
+            LibroDto libro = crearLibro();
+            listaLibrosAntigua.Add(libro);
+        }
+        /// <summary>
+        /// Metodo que pide la informacion necesaria de un nuevo libro
+        /// irodhan -> 08/04/2024
+        /// </summary>
+        /// <returns>Devuelve el objeto nuevo libro con toda la informacion obtenida</returns>
+        private LibroDto crearLibro() 
+        {
+            LibroDto nuevoLibro = new LibroDto();
+            Console.WriteLine("Introduzca el titulo del libro: ");
+            nuevoLibro.TituloLibro = Console.ReadLine();
+            Console.WriteLine("Introduzca el subtitulo del libro: ");
+            nuevoLibro.SubtituloLibro = Console.ReadLine();
+            Console.WriteLine("Introduzca el nombre del autor del libro: ");
+            nuevoLibro.NombreAutorLibro = Console.ReadLine();
+            Console.WriteLine("Introduzca el ISBN del libro: ");
+            nuevoLibro.IsbnLibro = Console.ReadLine();
+            Console.WriteLine("Introduzca el numero de edicion del libro: ");
+            nuevoLibro.NumeroEdicion=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Introduzca la editorial del libro: ");
+            nuevoLibro.EditorialLibro = Console.ReadLine();
+            Console.WriteLine("Introduzca el stock del libro: ");
+            nuevoLibro.StrockLibro=Convert.ToInt32(Console.ReadLine());
+            return nuevoLibro;
         }
 
         public void darAltaPrestamo(List<PrestamoDto> listaPrestamos)

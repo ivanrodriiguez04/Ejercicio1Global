@@ -13,14 +13,16 @@ namespace Ejercicio1Global.Dtos
     internal class BibliotecaDto
     {
         //Atributos
+        long idBiblioteca;
         string nombreBiblioteca = "aaaaa";
         string direccionBiblioteca = "aaaaa";
 
        
 
         //Constructores
-        public BibliotecaDto(string nombreBiblioteca, string direccionBiblioteca)
+        public BibliotecaDto(long idBiblioteca,string nombreBiblioteca, string direccionBiblioteca)
         {
+            this.IdBiblioteca=idBiblioteca;
             this.NombreBiblioteca = nombreBiblioteca;
             this.DireccionBiblioteca = direccionBiblioteca;
         }
@@ -29,6 +31,7 @@ namespace Ejercicio1Global.Dtos
         }
 
         //Getters & Setters
+        public long IdBiblioteca { get => idBiblioteca; set => idBiblioteca = value; }
         public string NombreBiblioteca { get => nombreBiblioteca; set => nombreBiblioteca = value; }
         public string DireccionBiblioteca { get => direccionBiblioteca; set => direccionBiblioteca = value; }
 
